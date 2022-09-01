@@ -2,9 +2,9 @@ class minecraft {
   file {‘/opt/minecraft’:
     ensure => directory,
   }
-  file {‘/opt/minecraft/minecraft_server.1.12.2.jar’:
+  file {‘/opt/minecraft/minecraft_server.jar’:
     ensure => file,
-    source      => 'https://s3.amazonaws.com/Minecraft.Download/versions/1.12.2/minecraft_server.1.12.2.jar',
+    source      => 'https://piston-data.mojang.com/v1/objects/f69c284232d7c7580bd89a5a4931c3581eae1378/server.jar',
   }
   package {‘java’:
     ensure => present,
